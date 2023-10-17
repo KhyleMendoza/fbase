@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let isLoginMode = true;
 
   function toggleRegistration() {
-    if (window.location.href.endsWith('fbase/') || window.location.href.endsWith('index.html')) {
       isLoginMode = !isLoginMode;
 
       const emailField = document.getElementById('email');
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
         registerButton.style.display = 'block';
         toggleMessage.textContent = "Already have an account? Login here";
       }
-    }
   }
 
   function register() {
