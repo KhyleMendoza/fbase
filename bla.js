@@ -30,9 +30,9 @@ function uploadProfilePicture() {
             storageRef.put(file).then((snapshot) => {
                 console.log('Profile picture uploaded successfully');
                 snapshot.ref.getDownloadURL().then((downloadURL) => {
+
                     userRef.update({
                         profile_picture_url: downloadURL,
-                        last_login: firebase.database.ServerValue.TIMESTAMP,
                     }).then(() => {
                         console.log('Profile picture URL updated successfully');
                         const profilePicture = document.getElementById('profile-picture');

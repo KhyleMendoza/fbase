@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const auth = firebase.auth();
   const database = firebase.database();
-
+  
   let isLoginMode = true;
 
   function toggleRegistration() {
@@ -58,11 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
     auth.createUserWithEmailAndPassword(email, password)
       .then(function () {
         const user = auth.currentUser;
+        const loginTime = new Date(); 
+        const formattedLoginTime = loginTime.toLocaleString();
 
         const userData = {
           email: email,
           full_name: fullName,
-          last_login: Date.now()
+          last_login: formattedLoginTime
         };
 
         const databaseRef = database.ref();
