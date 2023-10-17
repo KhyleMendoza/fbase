@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>home</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+    <div id="profile-container">
+        <h1>Welcome, <span id="username"></span>!</h1>
+        <p>Last Login: <span id="lastlogin"></span></p>
+        <p>User UID: <span id="uid"></span></p>
+        <p>Email: <span id="email"></span></p>
+        <p>Profile:</p>
+        <img style="max-width: 300px; max-height: 300px;" id="profile-picture" alt="Profile Picture">
+        <input type="file" id="profile-picture-input" accept="image/*">
+        <button onclick="uploadProfilePicture()">Upload Profile Picture</button>
+        <button onclick="deleteProfilePicture()">Delete Profile Picture</button>
+        <button onclick="logout()">Logout</button>
+      </div>   
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+
+<script src="bla.js" defer></script>
+</html>

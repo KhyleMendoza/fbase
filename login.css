@@ -1,0 +1,112 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form_header_container {
+    margin-bottom: 20px;
+}
+
+#form_header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: #B07A6B;
+    margin-top: 10px;
+}
+
+form {
+    text-align: left;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #B07A6B;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #704F42;
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background: #B07A6B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+}
+
+#registerButton {
+    width: 106.5%;
+    height: 40px;
+    background: #fff;
+    color: #fff;
+    border: 2px solid #B07A6B;
+    background-color: #B07A6B;
+    box-sizing: border-box;
+}
+
+#loginButton {
+    width: 106.5%;
+    height: 40px;
+    background: #fff;
+    color: #fff;
+    border: 2px solid #B07A6B;
+    background-color: #B07A6B;
+    box-sizing: border-box;
+}
+
+.toggle-message {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+#toggleMessage {
+    color: #007BFF;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 20px;
+}
