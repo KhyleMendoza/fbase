@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let isLoginMode = true;
 
   function toggleRegistration() {
-    if (window.location.href.endsWith('login/') || window.location.href.endsWith('index.html')) {
+    if (window.location.href.endsWith('fbase/') || window.location.href.endsWith('index.html')) {
       isLoginMode = !isLoginMode;
 
       const emailField = document.getElementById('email');
@@ -108,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
         databaseRef.child('users/' + user.uid).update(userData)
           .then(function () {
-            console.log("User logged in and last login time updated in the database.");
             window.location.href = 'home.html';
           })
           .catch(function (error) {

@@ -28,7 +28,7 @@ function uploadProfilePicture() {
             }
             const storageRef = firebase.storage().ref('profile/' + user.uid + '/' + file.name);
             storageRef.put(file).then((snapshot) => {
-                alert('Profile picture uploaded successfully');
+                console.log('Profile picture uploaded successfully');
                 snapshot.ref.getDownloadURL().then((downloadURL) => {
                     userRef.update({
                         profile_picture_url: downloadURL,
